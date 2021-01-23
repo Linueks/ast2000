@@ -1,0 +1,104 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{listings}
+
+\title{Oppskrift på rapport}
+\author{Håvard Tveit Ihle}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Introduksjon}
+
+Hva er problemstillingen du skal løse? Beskriv problemet kort, og gi en oversikt over hele rapporten. 
+
+\section{Metode/Fremgangsmåte}
+
+Her forklarer du hvordan du gikk fram for å løse oppgaven, hvilke valg du tok og hvilke metoder du brukte. 
+
+Hvis du har noen analytiske utregninger/mellomregninger, da hører de oftest hjemme i denne delen. 
+
+\subsection{Tips:}
+
+Her kan du skrive ligninger:
+\begin{equation}
+ E = mc^2,
+\end{equation}
+eller for eksempel en utledning (rekke av ligninger):
+\begin{align}
+  I &= \int_0^\pi \sin(x) dx \\ 
+    &= -\cos(x)\Big|_0^\pi\\
+    &= 2.
+\end{align}
+
+Hvis du har lyst til å liste opp punkter kan du bruke:
+\begin{itemize}
+\item Første punkt!
+\item Andre punkt!
+\end{itemize}
+eller
+\begin{enumerate}
+\item Første punkt!
+\item Andre punkt!
+\end{enumerate}
+
+Du kan indikere en vektor med $\vec a$ eller ${\bf a}$. Matriser kan du også ta med:
+\begin{equation}
+ \left( \begin{array}{cc}
+a_{11} & a_{12} \\
+a_{21} & a_{22} \end{array} \right)
+\end{equation}
+
+
+\section{Resultater}
+
+Her beskriver du kvantitivt de resultatene du har oppnådd. Gjerne i form av en eller flere figurer/plot eller tabeller. 
+
+\subsection{Tips:}
+Hvis du vil legge til en figur kan du gjøre dette: 
+% % (kommenter inn og legg filen ''eksempel.pdf'' i samme mappen som denne .tex - filen)
+% \begin{figure}[!h]
+% \centering
+% \includegraphics[width=12cm]{eksempel.pdf}
+% \caption{Dette er et awesome plot!}
+% \label{myPlot}
+% \end{figure}
+
+Husk å alltid referere til alle figurene i teksten ved å bruke labels: %Se figur \ref{myPlot}.
+
+Hvis du har et plot, så husk å gi labels til aksene (med enheter!). Vær også veldig tydelig på hvilke parametre som er brukt i plottet, all slik informasjon burde være tilgjengelig i plottet eller i figurteksten. 
+
+Du kan også legge til tabeller (for eksempel tabell \ref{NeonTable}):
+\begin{table}[ht]
+\begin{tabular}{ c | c | c | c | c |c }
+  $\alpha$ & $\beta$ & $E_{VMC}$ & $\sigma$ & $E_0$& N  \\
+\hline
+  10.22 & 0.0914   & -127.9(1) & 0.012 & -128.94 & $1.26\cdotp10^8$\\
+\end{tabular}
+\caption{Table of our results for the Neon atom. $\alpha$ and $\beta$ are the optimal variational parameters. $E_{VMC}$ gives our best estimate of the ground state energy, with a standard deviation of $\sigma$. $E_0$ is the estimated exact energy. $N$ is the number of MC-samples.\label{NeonTable}}
+\end{table}
+
+\section{Diskusjon og konklusjon}
+
+Prøv å sette resultatene dine i perspektiv. Er resultatene rimelige? Var det noe som var uventet? 
+
+Oppsummer resultatene og prosjektet i sin helhet. Prøv å trekke konklusjoner fra resultatene og diskusjonen din. 
+
+% For spesielt interesserte kan dere lage referanseliste (hvis du har brukt kildene \cite{Shankar} og \cite{Griffiths}), men dette er veldig overkill i dette faget. 
+% \begin{thebibliography}{9}
+% \bibitem{Shankar}
+% Shankar, R (1994). \emph{Principles of Quantum Mechanics.} 2nd edition.
+% \bibitem{Griffiths}
+% Griffiths, D. (2005). \emph{Introduction to Quantum Mechanics.} 2nd edition.
+% \end{thebibliography}
+
+\appendix 
+\section{Vedlegg}
+
+Hvis du har noen vedlegg, så kan du legge til det. Hvis du for eksempel har lyst til å legge ved koden din i rappoten, så hører den hjemme her. 
+
+\end{document}
